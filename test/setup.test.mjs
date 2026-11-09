@@ -1,6 +1,6 @@
 // A brand-new user, start to finish: no wallet, no keys -> doctor says what to do -> init -> keys set
 // (piped, the way a script would) -> env var beats the saved key -> the key value never shows up in output.
-// Runs in a throwaway home folder. Needs network (Solana devnet RPC, Pinata's auth check). Spends nothing.
+// Runs in a throwaway home folder. Needs network (Solana mainnet RPC, Pinata's auth check). Spends nothing.
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
@@ -36,7 +36,7 @@ check("keys explains all six", ["pinata", "twitterapi", "fal", "openai", "rpc", 
 
 // 3. init makes the wallet and shows the setup check right away
 r = run(["init"]);
-check("init creates the wallet and prints next steps", /Dev wallet created/.test(r.out) && /Next steps:/.test(r.out) && /Send devnet SOL to/.test(r.out), r.out);
+check("init creates the wallet and prints next steps", /Dev wallet created/.test(r.out) && /Next steps:/.test(r.out) && /Send SOL to/.test(r.out) && /MAINNET/.test(r.out), r.out);
 check("wallet file is in the home folder", fs.existsSync(path.join(home, "wallet.json")));
 
 // 4. Save a key the way a script or agent host would (piped in)

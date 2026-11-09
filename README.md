@@ -41,9 +41,10 @@ serial-dev init
 Or from source: `git clone https://github.com/gumballchief/serial-dev && cd serial-dev && npm install`, then
 use `node bin/serial-dev.js` wherever this page says `serial-dev`.
 
-`init` makes a dev wallet at `~/.serial-dev/wallet.json` (outside the repo), starts you on **devnet**, and
-runs the setup check: what works right now, what's missing, and the exact next step for each.
-Run it again any time:
+`init` makes a dev wallet at `~/.serial-dev/wallet.json` (outside the repo), starts you on **mainnet** (real SOL,
+where pump.fun is), and runs the setup check: what works right now, what's missing, and the exact next step for each.
+To practice first with free test SOL: `serial-dev config network devnet` (and `mainnet` to go back).
+Run the check again any time:
 
 ```bash
 serial-dev doctor
@@ -148,7 +149,7 @@ Every command takes `--json`. `serial-dev help` lists everything.
 
 | Setting | Default | |
 |---|---|---|
-| `network` | `devnet` | `mainnet` spends real SOL. Only the CLI can change it, never the MCP server |
+| `network` | `mainnet` | real SOL. `devnet` = practice with free test SOL. Only the CLI can change it, never the MCP server |
 | `devBuySol` | `0.1` | dev buy used when the agent doesn't pick one (`limits.minDevBuySol` sets an optional floor) |
 | `limits.maxDevBuySol` | `0.5` | the most an agent may ask for |
 | `limits.maxLaunchesPerHour` | `20` | |

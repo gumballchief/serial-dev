@@ -191,8 +191,8 @@ this kit won't take (section 11).
 ## 10. Guardrails
 
 - `limits.maxLaunchesPerHour`, `limits.maxSolPerDay`, `limits.cooldownSeconds` stop a runaway loop.
-- Start on devnet, then mainnet with the default 0.1 SOL dev buy and a small daily budget. Read `review` after 100 launches.
-- Only a human can switch to mainnet (`serial-dev config network mainnet`). The MCP server can't.
+- Start with the default 0.1 SOL dev buy and a small daily budget (`limits.maxSolPerDay`). To rehearse for free first, a human switches to devnet. Read `review` after 100 launches.
+- Only a human can switch networks (`serial-dev config network devnet|mainnet`). The MCP server can't.
 - Tragedy filter: deaths, killings, shootings and the like are skipped by default (`filters.blockWords`).
   Real devs coin those too. It's ghoulish and it gets reported; leave the filter on.
 

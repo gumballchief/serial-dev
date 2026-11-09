@@ -97,13 +97,13 @@ export async function doctor(cfg, { offline = false } = {}) {
     out.next.push(
       cfg.network === "devnet"
         ? `Send devnet SOL to ${out.wallet} (any devnet faucet, or from another devnet wallet). About 1 SOL lets you test plenty.`
-        : `Send SOL to ${out.wallet}. Each launch costs ~0.006 SOL plus whatever dev buy you choose.`
+        : `Send SOL to ${out.wallet}. Each launch costs ~0.006 SOL plus whatever dev buy you choose. To practice free first: serial-dev config network devnet`
     );
   if (!ok("pinata")) out.next.push(out.keys.pinata.set ? "Your Pinata key was rejected. Make a new one with Admin access: serial-dev keys set pinata" : keyStep("pinata"));
   if (!ok("twitterapi")) out.next.push((out.keys.twitterapi.set ? "Your twitterapi.io key was rejected. " : "For autopilot on X: ") + keyStep("twitterapi"));
   if (cfg.network === "mainnet" && !out.keys.rpc.set) out.next.push(`For speed on mainnet: ${keyStep("rpc")}`);
   if (!ok("fal") && !ok("openai")) out.next.push(`Optional, for drawn pictures: ${keyStep("fal")}`);
-  if (cfg.network === "devnet" && canLaunch) out.next.push("When you're ready for real SOL, a human runs: serial-dev config network mainnet");
+  if (cfg.network === "devnet") out.next.push("You're on devnet (practice, free test SOL). Back to real SOL: serial-dev config network mainnet");
   out.ready = canLaunch;
   out.files = { wallet: fs.existsSync(FILES.wallet) ? FILES.wallet : null, keys: fs.existsSync(FILES.keys) ? FILES.keys : null };
   return out;

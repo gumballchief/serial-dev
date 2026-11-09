@@ -12,7 +12,7 @@ import { createWallet, loadWallet } from "./wallet.js";
 const HELP = `serial-dev: turn tweets into pump.fun coins in seconds.
 
 Setup
-  init                         make the dev wallet + config (devnet by default), then the setup check
+  init                         make the dev wallet + config (mainnet by default), then the setup check
   doctor                       what works, what's missing, and the exact next step
   keys                         every API key: what it unlocks, where to get it, which are set
   keys set <name>              save a key (asks for it hidden). Names: ${Object.keys(KEYS).join(", ")}
@@ -20,7 +20,8 @@ Setup
   wallet                       address and SOL balance
   airdrop [sol]                devnet test SOL (if the faucet is open)
   config [key] [value]         show or change settings, e.g. config devBuySol 0.1
-  config network mainnet       go live (real SOL). Only a human should run this.
+  config network devnet        practice with free test SOL (config network mainnet to go back).
+                               Only a human should switch networks.
 
 One coin
   tweet <link>                 read a tweet
@@ -119,7 +120,7 @@ export async function main(argv) {
 
     case "init": {
       const { keypair, created } = createWallet();
-      if (!Object.keys(readFileConfig()).length) setConfig("network", "devnet");
+      if (!Object.keys(readFileConfig()).length) setConfig("network", "mainnet");
       const status = await pump.walletStatus(loadConfig(), keypair).catch(() => ({ address: keypair.publicKey.toBase58() }));
       if (json) return print({ wallet: created ? "created" : "already exists", ...status, walletFile: FILES.wallet, config: FILES.config, setup: await doctor(loadConfig()) }, true);
       console.log(`Dev wallet ${created ? "created" : "already exists"}: ${status.address}`);

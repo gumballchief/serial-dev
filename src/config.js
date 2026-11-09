@@ -100,8 +100,9 @@ export function keySources(env = process.env) {
 }
 
 export const DEFAULTS = {
-  // devnet until a human flips it. Agents can't change this through MCP.
-  network: "devnet",
+  // mainnet: real SOL, where pump.fun is. A human can switch to devnet to practice with free test SOL
+  // (serial-dev config network devnet). Agents can't change this through MCP.
+  network: "mainnet",
   rpcUrl: "",
   // Used only when the agent doesn't choose. How much to buy (0 included) is the agent's call;
   // PLAYBOOK.md section 9 tells it what each amount does.

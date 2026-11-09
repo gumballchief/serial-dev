@@ -86,7 +86,7 @@ export async function startMcp() {
         "First call setup_check. It says what works, what's missing and the exact steps for each missing piece.",
         "If something is missing, tell your human in plain words what to get and why (setup_check gives the wording).",
         "Ask them to save keys themselves by running `serial-dev keys set <name>` in their own terminal, so keys never pass through chat.",
-        "Then read_playbook once before launching. Network is devnet until a human switches it.",
+        "Then read_playbook once before launching. The network is mainnet: launches spend real SOL from the dev wallet, inside the limits the human set. Only the human can switch to devnet for practice.",
       ].join(" "),
     }
   );

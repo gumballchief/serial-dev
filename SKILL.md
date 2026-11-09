@@ -15,8 +15,8 @@ speed and the chain.
    is missing, pass its `keyGuide` steps to your human in plain words (a Pinata key is the only one needed to
    launch). Ask them to save keys by running `serial-dev keys set <name>` themselves, not to paste keys in chat.
 2. `read_playbook`. Section 2 is what real serial devs launch, measured on-chain. Copy that.
-3. `wallet_status`: network (devnet = practice, mainnet = real SOL), balance, limits, sources, image generator.
-   You cannot switch networks or raise limits. Mainnet is the human's call (`serial-dev config network mainnet`).
+3. `wallet_status`: network (mainnet = real SOL, devnet = practice), balance, limits, sources, image generator.
+   You cannot switch networks or raise limits. Switching networks is the human's call.
 4. If nothing is watched yet, set up the starter lists from the playbook (section 4) with `watch_list`
    and `sources`, and tell the human what you turned on.
 
