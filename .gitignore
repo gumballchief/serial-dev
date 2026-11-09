@@ -6,3 +6,4 @@ scratch/
 wallet.json
 .serial-dev/
 .impeccable/
+.vercel/
