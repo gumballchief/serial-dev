@@ -1,0 +1,54 @@
+{
+  "name": "serial-dev",
+  "version": "0.1.0",
+  "description": "Turn any AI agent into a serial pump.fun dev: watch X, turn fresh tweets into coins in seconds, collect creator fees. CLI + MCP server + playbook.",
+  "type": "module",
+  "bin": {
+    "serial-dev": "bin/serial-dev.js",
+    "serial-dev-mcp": "bin/serial-dev-mcp.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "PLAYBOOK.md",
+    "SKILL.md",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/unit.test.js test/sources.test.js",
+    "test:mcp": "node test/mcp.test.mjs",
+    "test:mainnet": "node test/simulate-mainnet.mjs",
+    "test:autopilot": "node test/autopilot.test.mjs",
+    "mcp": "node bin/serial-dev-mcp.js",
+    "test:setup": "node test/setup.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "pump.fun",
+    "solana",
+    "memecoin",
+    "mcp",
+    "ai-agent",
+    "tweet-coin",
+    "launch"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@pump-fun/pump-sdk": "^4.3.1",
+    "@solana/spl-token": "^0.4.15",
+    "@solana/web3.js": "^1.98.4",
+    "bn.js": "^5.2.2",
+    "bs58": "^6.0.0",
+    "sharp": "^0.35.5",
+    "ws": "^8.22.2",
+    "zod": "^4.6.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gumballchief/serial-dev.git"
+  },
+  "homepage": "https://github.com/gumballchief/serial-dev#readme"
+}

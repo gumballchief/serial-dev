@@ -1,0 +1,8 @@
+node_modules/
+scratch/
+.env
+.env.*
+*.keypair.json
+wallet.json
+.serial-dev/
+.impeccable/

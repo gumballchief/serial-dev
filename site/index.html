@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serial Dev</title>
+    <meta name="description" content="Open-source kit that turns any AI agent into a pump.fun serial dev. It watches X, Truth Social and the news, and launches the coin before anyone else." />
+    <meta name="theme-color" content="#1c1e1c" />
+    <link rel="icon" href="assets/icon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/icon-180.png" />
+    <meta property="og:title" content="Serial Dev" />
+    <meta property="og:description" content="Your agent is a serial dev now." />
+    <meta property="og:image" content="assets/icon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="assets/board.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Serial Dev home">
+        <img src="assets/dev-head.webp" alt="" width="38" height="34" />
+        <span>serial dev</span>
+      </a>
+      <nav class="links">
+        <a data-link="playbook" href="#">Playbook</a>
+        <a data-link="repo" href="#">GitHub</a>
+        <a data-link="docs" href="#">Docs</a>
+        <a class="btn ghost small" data-link="repo" href="#">Star on GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- 1. HERO: the tally wall. Every real pump.fun launch adds a mark, live. -->
+      <section class="hero" aria-label="Serial Dev">
+        <div class="board"><canvas class="wall" aria-hidden="true"></canvas></div>
+        <div class="stage">
+          <img class="hero-dev" src="assets/dev-chalk.webp" alt="The Serial Dev: a clay pill guy in a black beanie and sunglasses, holding chalk" width="678" height="900" />
+          <div class="ledge" aria-hidden="true">
+            <img class="coin c1" src="assets/coin.webp" alt="" width="225" height="240" />
+            <img class="coin c2" src="assets/coin.webp" alt="" width="225" height="240" />
+            <img class="coin c3" src="assets/coin.webp" alt="" width="225" height="240" />
+            <span class="chalk-stub"></span>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <h1 class="chalk"><span class="line">Your agent is</span><span class="line">a serial dev now.</span></h1>
+          <p class="sub">Open source. It watches X, Truth Social and the news, and launches the coin before anyone else.</p>
+          <div class="ctas">
+            <a class="btn primary" href="#install">Add it to your agent</a>
+            <a class="btn ghost" data-link="playbook" href="#">Read the playbook</a>
+          </div>
+        </div>
+        <div class="live" aria-live="polite">
+          <span class="live-label"><i class="dot"></i><span class="live-text">connecting to pump.fun</span></span>
+          <span class="live-count">0</span>
+          <span class="live-last"></span>
+        </div>
+      </section>
+
+      <!-- 2. HOW IT WORKS -->
+      <section class="how slate" id="how">
+        <div class="wrap">
+          <p class="label">How it works</p>
+          <h2 class="chalk">Post to coin<br />in 22 seconds.</h2>
+          <ol class="steps">
+            <li class="step">
+              <span class="stamp" data-t="0">0:00</span>
+              <article class="tweet card">
+                <header>
+                  <span class="avatar" aria-hidden="true">E</span>
+                  <span class="who"><b>Elon Musk</b><i class="verified" aria-label="verified"></i><span>@elonmusk</span></span>
+                  <span class="x" aria-hidden="true">𝕏</span>
+                </header>
+                <p class="tweet-text">the bird is freed</p>
+                <p class="meta">3:49 AM · Oct 28, 2022</p>
+                <footer><span>121K</span><span>292K</span><span>2.1M</span></footer>
+              </article>
+            </li>
+            <li class="arrow" aria-hidden="true"></li>
+            <li class="step">
+              <span class="stamp" data-t="19">0:19</span>
+              <article class="coin-card card">
+                <img src="assets/bird.webp" alt="A sparrow flying out of an open birdcage" width="640" height="640" loading="lazy" />
+                <h3>The Bird Is Freed</h3>
+                <p class="ticker">$BIRD</p>
+                <p class="small">picture: the name, drawn by GPT Image</p>
+              </article>
+            </li>
+            <li class="arrow" aria-hidden="true"></li>
+            <li class="step">
+              <span class="stamp" data-t="22">0:22</span>
+              <article class="live-card card">
+                <header>
+                  <img src="assets/bird.webp" alt="" width="64" height="64" loading="lazy" />
+                  <b>$BIRD</b>
+                  <span class="tag">LIVE</span>
+                </header>
+                <svg class="chart" viewBox="0 0 300 120" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="area" d="M0,112 L18,104 L30,108 L44,96 L58,99 L72,88 L86,92 L100,80 L114,84 L128,70 L142,74 L156,62 L170,66 L184,54 L198,58 L212,44 L226,47 L240,34 L254,38 L268,22 L282,26 L300,6 L300,120 L0,120 Z" />
+                  <path class="line" d="M0,112 L18,104 L30,108 L44,96 L58,99 L72,88 L86,92 L100,80 L114,84 L128,70 L142,74 L156,62 L170,66 L184,54 L198,58 L212,44 L226,47 L240,34 L254,38 L268,22 L282,26 L300,6" />
+                </svg>
+              </article>
+            </li>
+          </ol>
+          <p class="caption">It reads the post, names the coin like a trench dev would, gets the picture, and launches. Same post dies? It launches it again.</p>
+        </div>
+      </section>
+
+      <!-- 3. SOURCES: the evidence board -->
+      <section class="sources slate" id="sources">
+        <div class="wrap two">
+          <div class="evidence" aria-label="Sources">
+            <svg class="strings" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <line x1="50" y1="50" x2="22" y2="17" />
+              <line x1="50" y1="50" x2="74" y2="17" />
+              <line x1="50" y1="50" x2="18" y2="63" />
+              <line x1="50" y1="50" x2="80" y2="63" />
+              <line x1="50" y1="50" x2="50" y2="88" />
+            </svg>
+            <div class="note n1"><img class="pin" src="assets/pin.webp" alt="" /><b>X accounts</b><span>Elon and the accounts you pick</span></div>
+            <div class="note n2"><img class="pin" src="assets/pin.webp" alt="" /><b>Truth Social</b><span>every Trump post</span></div>
+            <div class="note n3"><img class="pin" src="assets/pin.webp" alt="" /><b>News desks</b><span>the name in the headline</span></div>
+            <div class="note n4"><img class="pin" src="assets/pin.webp" alt="" /><b>Going viral</b><span>posts blowing up right now</span></div>
+            <div class="note n5"><img class="pin" src="assets/pin.webp" alt="" /><b>Trending on pump</b><span>names three devs just launched</span></div>
+            <div class="note center"><img class="pin" src="assets/pin.webp" alt="" /><img class="mug" src="assets/dev-head.webp" alt="The Serial Dev" /></div>
+          </div>
+          <div class="side">
+            <p class="label">Sources</p>
+            <h2 class="chalk">It reads<br />everything.<br />You sleep.</h2>
+            <p class="body">Tier S accounts get everything coined. News gets the person, company or quote. Trends get copied before they cool.</p>
+            <a class="inline-link" data-link="playbook" href="#">See the starter list</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. PICTURES: the picture is the name -->
+      <section class="pictures paper" id="pictures">
+        <div class="wrap">
+          <p class="label dark">Pictures</p>
+          <h2 class="ink">The picture<br />is the name.</h2>
+          <div class="polaroids">
+            <figure class="pol p1">
+              <q>HE HAS A DOG CALLED MAX??</q>
+              <img src="assets/pic-max.webp" alt="A fluffy white dog lying on a brown couch" width="640" height="640" loading="lazy" />
+              <figcaption><span class="tag">$MAX</span><small>real photo, from the link</small></figcaption>
+            </figure>
+            <figure class="pol p2">
+              <q>Grok will be superintelligent</q>
+              <img src="assets/pic-grok.webp" alt="The Grok logo, white on black" width="640" height="640" loading="lazy" />
+              <figcaption><span class="tag">$GROK</span><small>real logo, from the link</small></figcaption>
+            </figure>
+            <figure class="pol p3">
+              <q>id for creatine but not voting</q>
+              <img src="assets/pic-creatine.webp" alt="A muscular shiba inu holding a scoop of creatine over a tub" width="640" height="640" loading="lazy" />
+              <figcaption><span class="tag">$CREATINE</span><small>made: the name as a picture</small></figcaption>
+            </figure>
+            <figure class="pol p4">
+              <q>could be impeached as soon as today</q>
+              <img src="assets/pic-impeach.webp" alt="A man in a suit standing on a giant peach" width="640" height="640" loading="lazy" />
+              <figcaption><span class="tag">$IMPEACH</span><small>made: a pun on the name</small></figcaption>
+            </figure>
+          </div>
+          <p class="pictures-note">Real picture when one exists. A pun on the name when it doesn't. Same picture on every relaunch.</p>
+        </div>
+      </section>
+
+      <!-- 5. THE NUMBERS -->
+      <section class="numbers slate" id="numbers">
+        <div class="wrap two">
+          <div class="big">
+            <p class="huge chalk"><span class="n">24</span>s</p>
+            <p class="mono dim">median launch after the post, measured on 157 live launches, Nov 9 2026</p>
+          </div>
+          <div class="ledger">
+            <p class="label">The case file</p>
+            <dl>
+              <div class="row"><dt>01</dt><dd class="v chalk">0.1 SOL</dd><dd class="d">dev buy at launch, about 0.35% of supply</dd></div>
+              <div class="row"><dt>02</dt><dd class="v chalk">0.30%</dd><dd class="d">of every trade goes to the dev</dd></div>
+              <div class="row"><dt>03</dt><dd class="v chalk">2 SOL</dd><dd class="d">of trading pays a coin back</dd></div>
+              <div class="row"><dt>04</dt><dd class="v chalk">0:01</dd><dd class="d">the fastest devs we watched</dd></div>
+              <div class="row"><dt>05</dt><dd class="v chalk">x3</dd><dd class="d">same post, third copy, sometimes the one that runs</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. INSTALL -->
+      <section class="install slate" id="install">
+        <div class="wrap center">
+          <h2 class="chalk">Give your agent the job.</h2>
+          <div class="terminal-wrap">
+            <img class="peek" src="assets/dev-peek.webp" alt="" width="720" height="511" />
+            <div class="terminal">
+              <div class="term-top">
+                <i></i><i></i><i></i>
+                <div class="tabs" role="tablist">
+                  <button role="tab" aria-selected="true" data-tab="claude">Claude Code</button>
+                  <button role="tab" aria-selected="false" data-tab="windows">Windows</button>
+                  <button role="tab" aria-selected="false" data-tab="any">Any MCP client</button>
+                </div>
+              </div>
+              <pre class="cmd" data-for="claude"><code>npm i -g github:gumballchief/serial-dev
+claude mcp add serial-dev -- serial-dev-mcp</code></pre>
+              <pre class="cmd" data-for="windows" hidden><code>npm i -g github:gumballchief/serial-dev
+claude mcp add serial-dev -- cmd /c serial-dev-mcp</code></pre>
+              <pre class="cmd" data-for="any" hidden><code>npm i -g github:gumballchief/serial-dev
+{ "mcpServers": { "serial-dev": { "command": "serial-dev-mcp" } } }</code></pre>
+              <button class="copy" type="button">Copy</button>
+            </div>
+          </div>
+          <p class="sub keys-note">
+            Your agent checks its own setup first and tells you what to grab. To launch you need one free
+            <span class="mono">Pinata</span> key. Watching X live adds a <span class="mono">twitterapi.io</span> key.
+            Everything else is optional.
+          </p>
+          <div class="ctas">
+            <button class="btn primary copy-cta" type="button">Copy the commands</button>
+            <a class="btn ghost" data-link="repo" href="#">Star on GitHub</a>
+          </div>
+        </div>
+        <footer class="foot">
+          <a class="brand" href="#top"><img src="assets/dev-head.webp" alt="" width="32" height="29" /><span>serial dev</span></a>
+          <p>Open source. MIT. Not financial advice.</p>
+          <nav><a data-link="playbook" href="#">Playbook</a><a data-link="repo" href="#">GitHub</a></nav>
+        </footer>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
