@@ -31,7 +31,7 @@ Most coins never trade 2 SOL. The ones that do pay for the rest. It's a volume g
 
 ## Setup (2 minutes)
 
-Site: https://serial-dev.vercel.app. Needs Node 20+ and git.
+Site: https://serialdev.fun. Needs Node 20+ and git.
 
 ```bash
 npm install -g github:gumballchief/serial-dev
